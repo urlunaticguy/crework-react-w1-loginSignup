@@ -30,7 +30,7 @@ class signup extends Component {
       mailError: funcs.checkEmail(p),
     });
 
-    if (p == "") {
+    if (p === "") {
       //if mail is empty then show no error special case
       this.setState({
         mailError: "",
@@ -45,7 +45,7 @@ class signup extends Component {
       passwordError: funcs.checkPassword(cc),
     });
 
-    if (cc == "") {
+    if (cc === "") {
       this.setState({
         passwordError: "",
       });
@@ -60,15 +60,15 @@ class signup extends Component {
 
   stopClick = (event) => {
     event.preventDefault();
-    if (this.state.name == "") {
+    if (this.state.name === "") {
       this.setState({
         nameError: "❌ Cannot be empty",
       });
-    } else if (this.state.email == "") {
+    } else if (this.state.email === "") {
       this.setState({
         mailError: "❌ Cannot be empty",
       });
-    } else if (this.state.password.length == 0) {
+    } else if (this.state.password.length === 0) {
       this.setState({
         passwordError: "❌ Cannot be empty",
       });
@@ -77,8 +77,8 @@ class signup extends Component {
     } else if (this.state.passwordError != "✅ No errors") {
       console.log("Signup - Invalid password syntax");
     } else if (
-      this.state.mailError == "✅ No errors" &&
-      this.state.passwordError == "✅ No errors"
+      this.state.mailError === "✅ No errors" &&
+      this.state.passwordError === "✅ No errors"
     ) {
       document.querySelector("#alert-signup").style.display = "flex";
       setTimeout(() => {

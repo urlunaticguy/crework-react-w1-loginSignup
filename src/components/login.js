@@ -21,7 +21,7 @@ class login extends Component {
       mailError: funcs.checkEmail(p),
     });
 
-    if (p == "") {
+    if (p === "") {
       //if mail is empty then show no error special case
       this.setState({
         mailError: "",
@@ -44,17 +44,17 @@ class login extends Component {
 
   stopClick = (event) => {
     event.preventDefault();
-    if (this.state.email == "") {
+    if (this.state.email === "") {
       this.setState({
         mailError: "❌ Cannot be empty",
       });
-    } else if (this.state.password.length == 0) {
+    } else if (this.state.password.length === 0) {
       this.setState({
         passwordError: "❌ Cannot be empty",
       });
-    } else if (this.state.mailError != "✅ No errors") {
+    } else if (this.state.mailError !== "✅ No errors") {
       console.log("Login - Invalid mail syntax");
-    } else if (this.state.password != "macbook") {
+    } else if (this.state.password !== "macbook") {
       event.preventDefault();
       this.updatePasswordError("❌ Wrong Password");
     } else {
