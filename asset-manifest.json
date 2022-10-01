@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e8f9d8dc.css",
+    "main.js": "/static/js/main.ace1cc59.js",
+    "static/media/app-bg.jpg": "/static/media/app-bg.57fe7fdd39774e777f6d.jpg",
+    "static/media/pricedown bl.woff": "/static/media/pricedown bl.d790cbc70075f4d18037.woff",
+    "static/media/Bank Gothic Light Regular.otf": "/static/media/Bank Gothic Light Regular.1008d50b7f3e37ea9828.otf",
+    "index.html": "/index.html",
+    "main.e8f9d8dc.css.map": "/static/css/main.e8f9d8dc.css.map",
+    "main.ace1cc59.js.map": "/static/js/main.ace1cc59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8f9d8dc.css",
+    "static/js/main.ace1cc59.js"
+  ]
+}
