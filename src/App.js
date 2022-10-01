@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { Component } from "react";
+import Login from "./components/login";
+import Signup from "./components/signup";
+
+let counter = 0;
+
+class MainDiv extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      div: <Login />,
+      changerMessage: "Need an account?",
+      buttonText: "SignUp",
+    };
+  }
+
+  updateState = () => {
+    if (counter % 2 == 0) {
+      this.setState({
+        div: <Signup />,
+        changerMessage: "Already have an account?",
+        buttonText: "Login",
+      });
+      counter++;
+    } else {
+      this.setState({
+        div: <Login />,
+        changerMessage: "Need an account?",
+        buttonText: "SignUp",
+      });
+      counter--;
+    }
+  };
+
+  render() {
+    return (
+      <div className="Main">
+        <div className="content">{this.state.div}</div>
+        <div className="changer">
+          <p className="p-changer">{this.state.changerMessage}</p>
+          <button className="btn-changer" onClick={this.updateState}>
+            {this.state.buttonText}
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainDiv />
     </div>
   );
 }
