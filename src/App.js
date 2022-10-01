@@ -16,7 +16,7 @@ class MainDiv extends Component {
   }
 
   updateState = () => {
-    if (counter % 2 == 0) {
+    if (counter % 2 === 0) {
       this.setState({
         div: <Signup />,
         changerMessage: "Already have an account?",

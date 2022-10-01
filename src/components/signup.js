@@ -72,9 +72,9 @@ class signup extends Component {
       this.setState({
         passwordError: "❌ Cannot be empty",
       });
-    } else if (this.state.mailError != "✅ No errors") {
+    } else if (this.state.mailError !== "✅ No errors") {
       console.log("SignUp - Invalid mail syntax");
-    } else if (this.state.passwordError != "✅ No errors") {
+    } else if (this.state.passwordError !== "✅ No errors") {
       console.log("Signup - Invalid password syntax");
     } else if (
       this.state.mailError === "✅ No errors" &&
